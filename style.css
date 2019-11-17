@@ -1,0 +1,97 @@
+body {
+  margin: auto;
+  margin-top: 70px;
+  width: 375px;
+  box-shadow: 0px 0px 1px #aaa9b387;
+}
+
+body > div {
+  width: 375px;
+  height: 812px;
+  background: linear-gradient(to right bottom, #3626a7, #553095);
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  display: block;
+  height: 756px;
+  opacity: 0;
+}
+
+.menu {
+  width: 92%;
+  height: 56px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuSvg {
+  position: absolute;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: transparent;
+  z-index: 1000;
+  box-shadow: 0px 0px 0px #120c34;
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem svg {
+  width: 30px;
+  height: 30px;
+  fill: #8980c5;
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem.isActive {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 70px;
+  background: #fff;
+  box-shadow: 0px 1px 12px #120c34;
+  transition: all 200ms ease-in-out;
+}
+
+
+.menuItem.isActive svg{
+  fill: #33249E;
+}
+
+.menuItem ~ .menuSvg{
+  transform: translate3d(241px, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem:nth-of-type(1).isActive ~ .menuSvg{
+  transform: translate3d(-136px, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem:nth-of-type(2).isActive ~ .menuSvg{
+  transform: translate3d(-68px, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem:nth-of-type(3).isActive ~ .menuSvg{
+  transform: translate3d(0, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem:nth-of-type(4).isActive ~ .menuSvg{
+  transform: translate3d(65px, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.menuItem:nth-of-type(5).isActive ~ .menuSvg{
+  transform: translate3d(133px, 0, 0);
+  transition: all 200ms ease-in-out;
+}
