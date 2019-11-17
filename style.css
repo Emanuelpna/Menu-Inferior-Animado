@@ -5,7 +5,7 @@ body {
   box-shadow: 0px 0px 1px #aaa9b387;
 }
 
-body > div {
+.fakeViewportLimit {
   width: 375px;
   height: 812px;
   background: linear-gradient(to right bottom, #3626a7, #553095);
@@ -30,14 +30,15 @@ body > div {
 
 .menuSvg {
   position: absolute;
+  transition: all 200ms ease-in-out;
 }
 
 .menuItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100px;
   background: transparent;
   z-index: 1000;
@@ -61,37 +62,11 @@ body > div {
   transition: all 200ms ease-in-out;
 }
 
-
-.menuItem.isActive svg{
-  fill: #33249E;
+.menuItem.isActive svg {
+  fill: #33249e;
 }
 
-.menuItem ~ .menuSvg{
+.menuItem ~ .menuSvg {
   transform: translate3d(241px, 0, 0);
-  transition: all 200ms ease-in-out;
-}
-
-.menuItem:nth-of-type(1).isActive ~ .menuSvg{
-  transform: translate3d(-136px, 0, 0);
-  transition: all 200ms ease-in-out;
-}
-
-.menuItem:nth-of-type(2).isActive ~ .menuSvg{
-  transform: translate3d(-68px, 0, 0);
-  transition: all 200ms ease-in-out;
-}
-
-.menuItem:nth-of-type(3).isActive ~ .menuSvg{
-  transform: translate3d(0, 0, 0);
-  transition: all 200ms ease-in-out;
-}
-
-.menuItem:nth-of-type(4).isActive ~ .menuSvg{
-  transform: translate3d(65px, 0, 0);
-  transition: all 200ms ease-in-out;
-}
-
-.menuItem:nth-of-type(5).isActive ~ .menuSvg{
-  transform: translate3d(133px, 0, 0);
   transition: all 200ms ease-in-out;
 }
